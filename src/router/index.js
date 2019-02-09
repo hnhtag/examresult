@@ -2,16 +2,21 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import User from '../components/User.vue'
 import Admin from '../components/Admin.vue'
+import HelloWorld from '../components/HelloWorld.vue'
 
 Vue.use(VueRouter)
 
 const routes = [{
         path: '/',
-        component: User
+        component: HelloWorld
     },
     {
         path: '/admin',
         component: Admin
+    },
+    {
+        path: '/user',
+        component: User
     }
 ]
 
