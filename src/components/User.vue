@@ -25,7 +25,7 @@
           </v-card-title>
 
           <v-card-actions>
-            <v-btn flat color="BLACK">VIEW</v-btn>
+             <router-link to="/result/foo">View</router-link>
           </v-card-actions>
         </v-card>
       </v-flex>
