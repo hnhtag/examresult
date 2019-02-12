@@ -286,16 +286,17 @@ export default {
 
       for (let index = 0; index < this.sheetData.length; index++) {
         const element = this.sheetData[index];
-        docName = "row-" + (index + 1);
+        if (index<=8) docName = "row-00" + (index + 1);
+        else if (index <= 98) docName = "row-0" + (index + 1);
+        else docName = "row-" + (index + 1);
         docRef = collectionRef.doc(docName);
         batch.set(docRef, element);
       }
 
       // Commit the batch
-      return batch.commit().then(function() {
-      });
-      
-        this.close();
+      return batch.commit().then(function() {});
+
+      this.close();
       // setTimeout(() => {
       // }, 300);
     },

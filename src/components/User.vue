@@ -3,11 +3,9 @@
     <v-layout>
       <v-flex xs12 sm6 offset-sm3>
         <form>
-          <v-text-field v-model="name" label="Name" data-vv-name="name" required></v-text-field>
-          <v-text-field v-model="RollNo" label="Roll-No" data-vv-name="Roll-No" required></v-text-field>
-          <v-text-field v-model="Class" label="Class" data-vv-name="Class" required></v-text-field>
+          <v-text-field v-model="RollNo" label="Roll-No" required></v-text-field>
 
-          <v-btn @click="select">search your result</v-btn>
+          <v-btn @click="findresult">search your result</v-btn>
         </form>
       </v-flex>
     </v-layout>
@@ -16,7 +14,6 @@
     <v-layout>
       <v-flex xs12 sm4 offset-md0>
         <v-card>
-          <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75"></v-img>
 
           <v-card-title primary-title>
             <div>
@@ -25,13 +22,12 @@
           </v-card-title>
 
           <v-card-actions>
-             <router-link to="/result/foo">View</router-link>
+            <router-link to="/result/1CST">View</router-link>
           </v-card-actions>
         </v-card>
       </v-flex>
       <v-flex xs12 sm4 offset-sm1>
         <v-card>
-          <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75"></v-img>
 
           <v-card-title primary-title>
             <div>
@@ -40,13 +36,12 @@
           </v-card-title>
 
           <v-card-actions>
-            <v-btn flat color="BLACK">VIEW</v-btn>
+            <router-link to="/result/2CS">View</router-link>
           </v-card-actions>
         </v-card>
       </v-flex>
       <v-flex xs12 sm4 offset-sm1>
         <v-card>
-          <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75"></v-img>
 
           <v-card-title primary-title>
             <div>
@@ -55,7 +50,7 @@
           </v-card-title>
 
           <v-card-actions>
-            <v-btn flat color="BLACK">VIEW</v-btn>
+            <router-link to="/result/2CT">View</router-link>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -65,7 +60,6 @@
     <v-layout>
       <v-flex xs12 sm4 offset-md0>
         <v-card>
-          <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75"></v-img>
 
           <v-card-title primary-title>
             <div>
@@ -74,13 +68,12 @@
           </v-card-title>
 
           <v-card-actions>
-            <v-btn flat color="BLACK">VIEW</v-btn>
+            <router-link to="/result/3CS">View</router-link>
           </v-card-actions>
         </v-card>
       </v-flex>
       <v-flex xs12 sm4 offset-sm1>
         <v-card>
-          <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75"></v-img>
 
           <v-card-title primary-title>
             <div>
@@ -89,13 +82,12 @@
           </v-card-title>
 
           <v-card-actions>
-            <v-btn flat color="BLACK">VIEW</v-btn>
+            <router-link to="/result/3CT">View</router-link>
           </v-card-actions>
         </v-card>
       </v-flex>
       <v-flex xs12 sm4 offset-sm1>
         <v-card>
-          <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75"></v-img>
 
           <v-card-title primary-title>
             <div>
@@ -104,7 +96,7 @@
           </v-card-title>
 
           <v-card-actions>
-            <v-btn flat color="BLACK">VIEW</v-btn>
+            <router-link to="/result/4CS">View</router-link>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -115,7 +107,6 @@
     <v-layout>
       <v-flex xs12 sm4 offset-md0>
         <v-card>
-          <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75"></v-img>
 
           <v-card-title primary-title>
             <div>
@@ -124,13 +115,12 @@
           </v-card-title>
 
           <v-card-actions>
-            <v-btn flat color="BLACK">VIEW</v-btn>
+            <router-link to="/result/4CT">View</router-link>
           </v-card-actions>
         </v-card>
       </v-flex>
       <v-flex xs12 sm4 offset-sm1>
         <v-card>
-          <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75"></v-img>
 
           <v-card-title primary-title>
             <div>
@@ -139,13 +129,12 @@
           </v-card-title>
 
           <v-card-actions>
-            <v-btn flat color="BLACK">VIEW</v-btn>
+            <router-link to="/result/5CS">View</router-link>
           </v-card-actions>
         </v-card>
       </v-flex>
       <v-flex xs12 sm4 offset-sm1>
         <v-card>
-          <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75"></v-img>
 
           <v-card-title primary-title>
             <div>
@@ -154,7 +143,7 @@
           </v-card-title>
 
           <v-card-actions>
-            <v-btn flat color="BLACK">VIEW</v-btn>
+            <router-link to="/result/5CT">View</router-link>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -166,15 +155,14 @@
 export default {
   data() {
     return {
-      aaa: ""
+      RollNo: ""
     };
   },
   mounted() {},
   methods: {
-    showData: function(e) {
-      alert(e);
-    },
-    select: function() {}
+    findresult:function(){
+
+    }
   }
 };
 </script>
