@@ -83,7 +83,7 @@
     <!--  -->
     <!--  -->
     <!--  -->
-    <v-layout row wrap v-if="!isSearch" mt-5 mb-5 id="first">
+    <v-layout row wrap v-if="!isSearch" mb-5>
       <v-flex md8 offset-md2>
         <v-container grid-list-md>
           <v-layout row wrap>
