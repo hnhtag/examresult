@@ -43,7 +43,7 @@ export default {
   mounted() {
     this.param = this.$route.params.id;
     firestore
-      .collection(this.param).orderBy(".key")
+      .collection(this.param)
       .get()
       .then(snapshot => {
         snapshot.forEach(doc => {
