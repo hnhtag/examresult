@@ -10,7 +10,7 @@ Vue.use(VueRouter)
 
 const routes = [{
         path: '/',
-        component: HelloWorld
+        component: User
     },
     {
         path: '/admin',
@@ -18,7 +18,7 @@ const routes = [{
     },
     {
         path: '/user',
-        component: User
+        component: HelloWorld
     },
     {
         path: '/result/:id',
