@@ -51,7 +51,7 @@
                             @drop="handleDrop"
                             @dragover="handleDragover"
                             @dragenter="handleDragover"
-                          >Drop Here</div>
+                          >Dropdf Here</div>
                         </v-flex>
                       </v-layout>
                     </v-container>
