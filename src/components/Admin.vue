@@ -72,6 +72,7 @@
             >
               <template slot="items" slot-scope="props">
                 <tr>
+                  <td>{{ props.item.rollno }}</td>
                   <td>{{ props.item.name }}</td>
                 </tr>
               </template>
@@ -176,6 +177,8 @@ function handleDrop(e) {
       // bus
       tempheader = data.headers;
       tempdata = data.sheetData;
+
+      alert("Uploaded");
     };
     reader.readAsArrayBuffer(f);
   }
@@ -286,7 +289,7 @@ export default {
 
       for (let index = 0; index < this.sheetData.length; index++) {
         const element = this.sheetData[index];
-        if (index<=8) docName = "row-00" + (index + 1);
+        if (index <= 8) docName = "row-00" + (index + 1);
         else if (index <= 98) docName = "row-0" + (index + 1);
         else docName = "row-" + (index + 1);
         docRef = collectionRef.doc(docName);
@@ -294,10 +297,10 @@ export default {
       }
 
       // Commit the batch
-      return batch.commit().then(function() {});
+      return batch.commit().then(this.close());
 
-      this.close();
       // setTimeout(() => {
+      //   this.dialog = false;
       // }, 300);
     },
     getClassData: function(collName) {
@@ -323,6 +326,29 @@ export default {
         .catch(err => {
           console.log("Error getting documents", err);
         });
+
+      //get headers
+
+      // if (collName == "1CST") {
+      //   firestore
+      //     .collection("subject")
+      //     .doc("1CST")
+      //     .get()
+      //     .then(doc => {
+      //       var temp = doc.data();
+      //       console.log(this.headers);
+      //     });
+      // } else {
+      //   firestore
+      //     .collection("subject")
+      //     .doc("other")
+      //     .get()
+      //     .then(doc => {
+      //       var temp = doc.data();
+      //       // this.selectedClassHeaders = temp.subject;
+      //       console.log(this.headers);
+      //     });
+      // }
     }
   }
 };

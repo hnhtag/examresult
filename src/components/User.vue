@@ -31,7 +31,7 @@
     <!-- result -->
     <v-layout row wrap v-if="isSearch" text-md-center mb-5>
       <v-flex offset-md4 md4>
-        <v-alert type="success" :value="true">Congratulation! You passed.</v-alert>
+        <!-- <v-alert type="success" :value="true">Congratulation! You passed.</v-alert> -->
         <v-card>
           <v-card-text text-md-left>
             <h3>Name:{{result.name}}</h3>
@@ -289,7 +289,6 @@ export default {
           .get()
           .then(snapshot => {
             snapshot.forEach(doc => {
-              console.log(doc.data());
               this.result = doc.data();
             });
             this.isSearch = true;
